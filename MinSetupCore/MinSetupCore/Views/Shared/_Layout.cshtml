@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - ASP.net Core Awesome min setup demo</title>
+
+    <link href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/themes/wui/AwesomeMvc.css")?v=73" rel="stylesheet" type="text/css" id="aweStyle" />
+    <link href="@Url.Content("~/css/themes/wui/awem.css")?v=73" rel="stylesheet" type="text/css" id="modsStyle" />
+    <link href="@Url.Content("~/css/Common.css")" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    @*jquery needs to be at the top*@
+</head>
+<body>
+<div class="main">
+    @RenderBody()
+</div>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js" type="text/javascript"></script>
+<script src="@Url.Content("~/js/AwesomeMvc.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/awem.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/js/utils.js")" type="text/javascript"></script>
+
+    @*call init after utils.js and validate.js*@
+    @Html.Awe().Init()
+
+<script src="http://ajax.aspnetcdn.com/ajax/mvc/5.1/jquery.validate.unobtrusive.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+</body>
+</html>
